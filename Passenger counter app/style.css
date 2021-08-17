@@ -1,0 +1,38 @@
+
+.box{
+    background-color:gray;
+    width:500px;
+    height:500px;
+    margin:0 auto;
+}
+.box h1, h2{
+    text-align:center;
+    padding:10px;
+}
+#valueincrease, #save-btn{
+    background-color:red;
+    color:#fff;
+    border-radius:20px;
+    border:none;
+    padding:10px;
+    margin: 62px;
+    cursor:pointer;
+}
+#valueincrease:hover{
+    color:gray;
+}
+#save-btn{
+    background-color:green;
+    display:block;
+    margin:0 auto;
+}
+button#purchase-btn {
+    background-color: red;
+    border-radius: 10px;
+    padding: 9px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    margin-left: -12%;
+    cursor:pointer;
+}
