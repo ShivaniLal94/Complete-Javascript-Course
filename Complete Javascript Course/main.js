@@ -518,3 +518,50 @@ let ab = 5;
 let bc = 10;
 console.log(`Fifteen is ${ab+bc} and
 not ${ab-bc}.`);
+
+
+//FUNCTIONS
+
+function calcAge(birthYear, firstName){
+const age = 2037-birthYear;
+console.log(`${firstName} is ${age} years old`);
+return age;
+}
+const age1 = calcAge(1991, 'Shivani');
+console.log(age1);
+
+  // "OR" you can directly return the function
+
+  function calcAge(birthYear, firstName){
+  return 2037-birthYear;
+  }
+  const age2 = calcAge(1991, 'Shivani');
+  console.log(age2);
+
+  
+  
+  
+  function myFunction(a,b){
+  return a*b;
+  }
+  let multiply = myFunction(4,4);
+  document.getElementById("demo").innerHTML= multiply;
+  console.log(multiply);
+
+// "                 OR"
+  let result = document.getElementById("demo").innerHTML
+  function myFunction2(p1,p2){
+    return p1*p2;
+  }
+  result.innerHTML = myFunction2(4,4);
+  console.log(result);
+
+
+
+
+  let errormsg = document.getElementById("demo2")
+  function msgError(){
+    errormsg.innerText = "Oops! Something went wrong";
+    console.log(errormsg);
+  }
+   msgError();
