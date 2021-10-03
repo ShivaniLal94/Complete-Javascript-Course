@@ -509,15 +509,21 @@ switch(area){
 }   
 
 // Template literals:
+// Template literals are enclosed by the backtick (` `) (grave accent) character instead of double or single quotes.
+// Template literals can contain placeholders. These are indicated by the dollar sign and curly braces (${expression}). The expressions in the placeholders and the text between the backticks (` `) get passed to a function.
+
+// To escape a backtick in a template literal, put a backslash (\) before the backtick.
+
+// `\`` === '`' // --> true
 // let ab = 5;
 // let bc = 10;
 // console.log('Fifteen is ' + (ab+bc) + ' and \n not ' + (ab-bc) +'.');
 
-// Rewritting in ternany:
+// Rewritting in template literal: Multi-line strings, to not use \n and continue line from another line
 let ab = 5;
-let bc = 10;
+let bc = 10;  
 console.log(`Fifteen is ${ab+bc} and
-not ${ab-bc}.`);
+not ${ab-bc}.`);   //In order to embed expressions within normal strings, Expression interpolation is used.//
 
 
 //FUNCTIONS
@@ -538,30 +544,58 @@ console.log(age1);
   const age2 = calcAge(1991, 'Shivani');
   console.log(age2);
 
-  
-  
-  
   function myFunction(a,b){
-  return a*b;
+  let multiply = a*b;
+  return multiply;
   }
-  let multiply = myFunction(4,4);
-  document.getElementById("demo").innerHTML= multiply;
-  console.log(multiply);
-
-// "                 OR"
-  let result = document.getElementById("demo").innerHTML
-  function myFunction2(p1,p2){
-    return p1*p2;
-  }
-  result.innerHTML = myFunction2(4,4);
-  console.log(result);
-
-
-
+  document.getElementById("demo").innerHTML= myFunction(4,4);
 
   let errormsg = document.getElementById("demo2")
-  function msgError(){
+  function msgerror(){
     errormsg.innerText = "Oops! Something went wrong";
-    console.log(errormsg);
   }
-   msgError();
+  msgerror();
+                            // OR
+
+  // function msgerror(){
+  //   document.getElementById("demo2").innerText = "Oops! Something went wrong";
+  // }
+  // msgerror();
+
+  function mymultiple(amp,mpd){
+    let multiply = amp*mpd;
+    return multiply;
+  }
+  let m2 = mymultiple(3,3);
+  console.log(m2);
+
+
+
+
+  //ARRAYS//
+
+  // const friends = ['shivani', 'omi'];
+
+  // USING NEW ARRAY KEYWORD
+
+  const friends = new Array ('shivani' , 'omi');
+  console.log(friends);
+
+  //HOw TO GET VALUE FROM AN ARRAY
+
+  console.log(friends[0]);
+  
+  //HOW TO GET THE LENGTH OF THE ARRAY
+
+  console.log(friends.length);
+
+  //HOW TO FIND THE LAST VALUE IN THE ARRAY
+
+  console.log(friends[friends.length-1]);
+
+  //HOW TO MUTATE OR CHANGE THE VALUE IN THE ARRAY
+
+  friends[1] = 'kabira';
+  console.log(friends);
+
+  //ARRAYS ARE NOT PRIMITIVE VALUES SO WE CAN CHANGE OR MUTATE THEM EVEN IF THEY ARE DECLARED WITH CONST
